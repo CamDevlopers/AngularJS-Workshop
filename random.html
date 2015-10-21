@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Codingate Team</title>
+	<script type="text/javascript" src='js/angular.min.js'></script>
+</head>
+<body ng-app='myApp' ng-controller="myCtrl" ng-init="default='img/cg.png'">
+	
+    <center>
+        <img src='{{ teams[person].img ? teams[person].img:default }}' width="300"/><br/>
+        <h2>{{ teams[person].name ? teams[person].name:"Codingate" }}</h2><br/>
+        <button ng-click='getPerson()'> Random</button>
+        <button ng-click='pause()'>Stop</button>
+   </center>
+
+</body>
+    <script type="text/javascript" src="js/random.js"> </script>
+
+</html>

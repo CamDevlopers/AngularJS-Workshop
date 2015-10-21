@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Codingate Team</title>
+	<script type="text/javascript" src='js/angular.min.js'></script>
+	<meta charset="UTF-8">
+</head>
+<body ng-app='myApp' ng-controller="myCtrl">
+	<input type='text' ng-model="search"/>
+	<div ng-show='search?true:false'>
+    	<div ng-repeat='people in teams | filter:search | orderBy:"name"'>
+    		<img src="{{ people.img }}"/>
+    		<h3>{{people.name}}</h3>
+    	</div>
+    </div>
+
+</body>
+    <script type="text/javascript">
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+        	$scope.teams = [
+        					{'name':"BOB",'img':'teams/monkol.png'},
+        					{'name':"Ao Chhay",'img':'teams/chhay.png'},
+        					{'name':"ChhingChhing Hem",'img':'teams/chhing.png'},
+        					{'name':"Hatta Set",'img':'teams/hatta.png'},
+        					{'name':"Hong Va",'img':'teams/hong.png'},
+        					{'name':"Sopheak Neary",'img':'teams/neary.png'},
+        					{'name':"Rady Rous",'img':'teams/rady.png'},
+        					{'name':"Rithy Thul",'img':'teams/rithy.png'},
+        					{'name':"Saorin Phan Neary",'img':'teams/saorin.png'},
+        					{'name':"Reaksmey Se",'img':'teams/smey.png'},
+        					{'name':"Panha Sok",'img':'teams/sok_panha.png'},
+        					{'name':"Sokeara Sim",'img':'teams/sokeara.png'},
+        					{'name':"Sokly Phal",'img':'teams/sokly.png'},
+        					{'name':"Sokleak Lanh",'img':'teams/soleak.png'},
+        					{'name':"Sovanna Suos",'img':'teams/sovanna.png'},
+        					{'name':"Sreychen Sok",'img':'teams/sreychen.png'},
+        					{'name':"Sreynak Chet",'img':'teams/sreynak.png'},
+        					{'name':"Thida Pen",'img':'teams/thida.png'},
+        					{'name':"Vanneth Chan",'img':'teams/vannet.png'},
+                            {'name':"Sovannborey Ly",'img':'teams/borey.png'},
+                            {'name':"Chumnor Or",'img':'teams/chumnor.png'},
+        				   ];
+        });
+    </script>
+
+</html>

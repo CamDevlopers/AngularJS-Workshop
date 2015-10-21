@@ -48,7 +48,7 @@ app.controller('calculateInvoice',function($scope){
 //disable add button when user didn't fill the data
 	$scope.checkForm = function(){
 		var check = 0; 
-		angular.forEach($scope.invoices.items,function(item){
+		angular.forEach($scope.invoices.items, function(item){
 			if(item.item_name=='' || item.quantity=='' || item.unitPrice==''){
 				check = 1;
 			}else{
